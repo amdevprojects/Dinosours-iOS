@@ -14,6 +14,11 @@
 		12CD6C412B4465690040A3EE /* DinosourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C402B4465690040A3EE /* DinosourTests.swift */; };
 		12CD6C4B2B4465690040A3EE /* DinosourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C4A2B4465690040A3EE /* DinosourUITests.swift */; };
 		12CD6C4D2B4465690040A3EE /* DinosourUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C4C2B4465690040A3EE /* DinosourUITestsLaunchTests.swift */; };
+		12CD6C5A2B4466AD0040A3EE /* apexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = 12CD6C592B4466AD0040A3EE /* apexpredators.json */; };
+		12CD6C5C2B44672A0040A3EE /* Dinosour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C5B2B44672A0040A3EE /* Dinosour.swift */; };
+		12CD6C5E2B4480630040A3EE /* DinosourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C5D2B4480630040A3EE /* DinosourController.swift */; };
+		12CD6C602B4486E40040A3EE /* DinosourRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C5F2B4486E40040A3EE /* DinosourRow.swift */; };
+		12CD6C622B448D170040A3EE /* DinosourDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD6C612B448D170040A3EE /* DinosourDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		12CD6C462B4465690040A3EE /* DinosourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinosourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CD6C4A2B4465690040A3EE /* DinosourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosourUITests.swift; sourceTree = "<group>"; };
 		12CD6C4C2B4465690040A3EE /* DinosourUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosourUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12CD6C592B4466AD0040A3EE /* apexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apexpredators.json; sourceTree = "<group>"; };
+		12CD6C5B2B44672A0040A3EE /* Dinosour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinosour.swift; sourceTree = "<group>"; };
+		12CD6C5D2B4480630040A3EE /* DinosourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosourController.swift; sourceTree = "<group>"; };
+		12CD6C5F2B4486E40040A3EE /* DinosourRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosourRow.swift; sourceTree = "<group>"; };
+		12CD6C612B448D170040A3EE /* DinosourDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosourDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +106,13 @@
 			children = (
 				12CD6C2F2B4465660040A3EE /* DinosourApp.swift */,
 				12CD6C312B4465660040A3EE /* ContentView.swift */,
+				12CD6C592B4466AD0040A3EE /* apexpredators.json */,
 				12CD6C332B4465690040A3EE /* Assets.xcassets */,
 				12CD6C352B4465690040A3EE /* Preview Content */,
+				12CD6C5B2B44672A0040A3EE /* Dinosour.swift */,
+				12CD6C5D2B4480630040A3EE /* DinosourController.swift */,
+				12CD6C5F2B4486E40040A3EE /* DinosourRow.swift */,
+				12CD6C612B448D170040A3EE /* DinosourDetails.swift */,
 			);
 			path = Dinosour;
 			sourceTree = "<group>";
@@ -233,6 +248,7 @@
 			files = (
 				12CD6C372B4465690040A3EE /* Preview Assets.xcassets in Resources */,
 				12CD6C342B4465690040A3EE /* Assets.xcassets in Resources */,
+				12CD6C5A2B4466AD0040A3EE /* apexpredators.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CD6C5C2B44672A0040A3EE /* Dinosour.swift in Sources */,
 				12CD6C322B4465660040A3EE /* ContentView.swift in Sources */,
+				12CD6C602B4486E40040A3EE /* DinosourRow.swift in Sources */,
+				12CD6C5E2B4480630040A3EE /* DinosourController.swift in Sources */,
 				12CD6C302B4465660040A3EE /* DinosourApp.swift in Sources */,
+				12CD6C622B448D170040A3EE /* DinosourDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let controller = DinosourController()
+    
+    @State var sortAlphabetical = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if sortAlphabetical {
+            controller.sortAlphabetical()
+        } else {
+            controller.sortByMovie()
         }
-        .padding()
+        
+        return NavigationView {
+            List {
+                ForEach(controller.dinosours) { dinosour in
+                    NavigationLink(destination: DinosourDetails(dinosour: dinosour)) {
+                        DinosourRow(dinosour: dinosour)
+                    }
+                }
+            }
+            .navigationTitle("Dinosours")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        sortAlphabetical.toggle()
+                    } label: {
+                        if (sortAlphabetical) {
+                            Image(systemName: "film")
+                        } else {
+                            Image(systemName: "textformat")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }
