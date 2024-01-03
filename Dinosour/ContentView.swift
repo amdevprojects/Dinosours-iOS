@@ -12,8 +12,11 @@ struct ContentView: View {
     let controller = DinosourController()
     
     @State var sortAlphabetical = false
+    @State var filter = "All"
     
     var body: some View {
+        controller.filter(filter: filter)
+        
         if sortAlphabetical {
             controller.sortAlphabetical()
         } else {
@@ -32,13 +35,30 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        sortAlphabetical.toggle()
+                        withAnimation {
+                            sortAlphabetical.toggle()
+                        }
                     } label: {
                         if (sortAlphabetical) {
                             Image(systemName: "film")
                         } else {
                             Image(systemName: "textformat")
                         }
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Picker("Filter", selection: $filter.animation()) {
+                            ForEach(controller.filters, id: \.self) { filter in
+                                HStack {
+                                    Text(filter)
+                                    Spacer()
+                                    Image(systemName: controller.filterIcon(filter: filter))
+                                }
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
                     }
                 }
             }

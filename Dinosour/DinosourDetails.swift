@@ -41,6 +41,7 @@ struct DinosourDetails: View {
                 ForEach(dinosour.movieScenes) { movieScene in
                     Text(movieScene.movie)
                         .font(.title2)
+                        .padding(.top, 8)
                     Text(movieScene.sceneDescription)
                 }
                 Text(dinosour.link)
